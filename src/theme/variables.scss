@@ -1,0 +1,74 @@
+:root {
+  --ion-color-primary: #6366F1;
+  --ion-color-primary-rgb: 99, 102, 241;
+  --ion-color-primary-contrast: #FFFFFF;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #5153C9;
+  --ion-color-primary-tint: #7B7DF3;
+
+  --ion-color-secondary: #22D3EE;
+  --ion-color-secondary-rgb: 34, 211, 238;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-shade: #1EBCD2;
+  --ion-color-secondary-tint: #3ED8F0;
+
+  --ion-color-tertiary: #A78BFA;
+  --ion-color-tertiary-rgb: 167, 139, 250;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-shade: #937ADD;
+  --ion-color-tertiary-tint: #B097FB;
+
+  --ion-color-success: #34D399;
+  --ion-color-success-rgb: 52, 211, 153;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-shade: #2EBA87;
+  --ion-color-success-tint: #48D8A3;
+
+  --ion-color-warning: #FBBF24;
+  --ion-color-warning-rgb: 251, 191, 36;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-shade: #DDA820;
+  --ion-color-warning-tint: #FCC53A;
+
+  --ion-color-danger: #F87171;
+  --ion-color-danger-rgb: 248, 113, 113;
+  --ion-color-danger-contrast: #000000;
+  --ion-color-danger-shade: #DA6363;
+  --ion-color-danger-tint: #F98181;
+
+  --ion-color-medium: #64748B;
+  --ion-color-medium-rgb: 100, 116, 139;
+  --ion-color-medium-contrast: #FFFFFF;
+  --ion-color-medium-shade: #58677A;
+  --ion-color-medium-tint: #748297;
+
+  --ion-color-light: #E2E8F0;
+  --ion-color-light-rgb: 226, 232, 240;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-shade: #C7CCD3;
+  --ion-color-light-tint: #E5EAF1;
+
+  --ion-background-color: #FFFFFF;
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-item-background: #F8FAFC;
+  --ion-text-color: #0F172A;
+  --ion-text-color-rgb: 15, 23, 42;
+  --ion-color-step-300: #94A3B8;
+  --ion-menu-background: #F8FAFC;
+  --ion-toolbar-background: #FFFFFF;
+  --ion-card-background: #FFFFFF;
+  --ion-border-color: #E2E8F0;
+}
+
+html.dark {
+  --ion-background-color: #0C0F15;
+  --ion-background-color-rgb: 12, 15, 21;
+  --ion-item-background: #1A1D24;
+  --ion-text-color: #E2E8F0;
+  --ion-text-color-rgb: 226, 232, 240;
+  --ion-color-step-300: #64748B;
+  --ion-menu-background: #1A1D24;
+  --ion-toolbar-background: #0C0F15;
+  --ion-card-background: #1A1D24;
+  --ion-border-color: #2A2D35;
+}

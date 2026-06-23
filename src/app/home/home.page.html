@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="dashboard">
+    <div class="dash-header">
+      <div class="dash-badge">MONOLITH SYSTEM v1.0</div>
+      <h1 class="dash-title">Panel de Control</h1>
+      <p class="dash-subtitle">Aplicación Industrial con Ionic 8 + Angular</p>
+      <div class="dash-status">
+        <span class="status-indicator"></span>
+        SISTEMA OPERATIVO
+      </div>
+    </div>
+
+    <div class="dash-cards">
+      <a class="dash-card" routerLink="/personal" routerLinkActive="active">
+        <ion-icon name="person-outline"></ion-icon>
+        <span class="card-label">Personal</span>
+        <span class="card-desc">Información del usuario</span>
+      </a>
+
+      <a class="dash-card" routerLink="/contact" routerLinkActive="active">
+        <ion-icon name="mail-outline"></ion-icon>
+        <span class="card-label">Contacto</span>
+        <span class="card-desc">Enviar mensaje</span>
+      </a>
+    </div>
+  </div>
+</ion-content>

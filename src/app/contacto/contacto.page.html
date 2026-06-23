@@ -1,0 +1,65 @@
+<ion-content>
+  <div class="contacto-container">
+    <div class="page-title fade-in-up delay-1">Contacto</div>
+
+    <div class="form-card fade-in-up delay-2">
+      @if (sent) {
+        <div class="success-msg">¡Mensaje enviado con éxito! Te responderé pronto.</div>
+      }
+
+      @if (error) {
+        <div class="error-msg">{{ error }}</div>
+      }
+
+      <form [formGroup]="contactForm" (ngSubmit)="confirmSend()">
+        <ion-input
+          formControlName="name"
+          fill="outline"
+          label="Nombre"
+          label-placement="floating"
+          placeholder="Tu nombre"
+          class="form-field"
+          mode="md"
+        ></ion-input>
+
+        <ion-input
+          formControlName="email"
+          fill="outline"
+          type="email"
+          label="Correo Electrónico"
+          label-placement="floating"
+          placeholder="tu@correo.com"
+          class="form-field"
+          mode="md"
+        ></ion-input>
+
+        <ion-textarea
+          formControlName="message"
+          fill="outline"
+          label="Mensaje"
+          label-placement="floating"
+          rows="5"
+          placeholder="Escribe tu mensaje..."
+          class="form-field"
+          mode="md"
+        ></ion-textarea>
+
+        <ion-button
+          type="submit"
+          expand="full"
+          color="primary"
+          [disabled]="contactForm.invalid || sending"
+          class="submit-btn"
+        >
+          @if (sending) {
+            <ion-spinner slot="start" name="crescent"></ion-spinner>
+            Enviando...
+          } @else {
+            <ion-icon slot="start" name="mail-outline"></ion-icon>
+            Enviar Mensaje
+          }
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

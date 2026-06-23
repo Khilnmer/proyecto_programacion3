@@ -1,0 +1,71 @@
+<ion-app>
+  <ion-menu contentId="app-content" type="push" class="mobile-menu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Navegación</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        @for (p of appPages; track p.title) {
+          <ion-item
+            [routerLink]="p.url"
+            routerLinkActive="selected"
+            routerDirection="root"
+            lines="none"
+            detail="false"
+          >
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>{{ p.title }}</ion-label>
+          </ion-item>
+        }
+      </ion-list>
+
+      <ion-item button (click)="themeService.toggleTheme()" lines="none" detail="false">
+        <ion-icon
+          slot="start"
+          [name]="themeService.theme() === 'dark' ? 'sunny' : 'moon'"
+        ></ion-icon>
+        <ion-label>
+          {{ themeService.theme() === 'dark' ? 'Modo Claro' : 'Modo Oscuro' }}
+        </ion-label>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <ion-buttons class="mobile-only">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <span class="topbar-brand">MONOLITH</span>
+      </div>
+      <nav class="topbar-right desktop-only">
+        @for (p of appPages; track p.title) {
+          <a
+            class="topbar-link"
+            [routerLink]="[p.url]"
+            routerLinkActive="active"
+          >
+            <ion-icon [name]="p.icon + '-outline'"></ion-icon>
+            {{ p.title }}
+          </a>
+        }
+        <button
+          type="button"
+          class="topbar-link theme-btn"
+          (click)="themeService.toggleTheme()"
+        >
+          <ion-icon
+            [name]="themeService.theme() === 'dark' ? 'sunny-outline' : 'moon-outline'"
+          ></ion-icon>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="app-content" class="app-content">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+</ion-app>

@@ -1,0 +1,128 @@
+ion-menu {
+  --background: var(--ion-menu-background);
+  --width: 280px;
+}
+
+ion-menu ion-content { --background: var(--ion-menu-background); }
+
+ion-menu ion-header ion-toolbar {
+  --background: var(--ion-menu-background);
+  --color: var(--ion-text-color);
+  --border-color: var(--ion-border-color);
+}
+
+ion-menu ion-list {
+  background: var(--ion-menu-background);
+  padding: 8px 0;
+}
+
+ion-menu ion-item {
+  --background: var(--ion-menu-background);
+  --color: var(--ion-text-color);
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 48px;
+  font-size: 0.95rem;
+}
+
+ion-menu ion-item.selected {
+  --background: rgba(var(--ion-color-primary-rgb), 0.12);
+  --color: var(--ion-color-primary);
+  border-right: 3px solid var(--ion-color-primary);
+}
+
+ion-menu ion-item.selected ion-icon { color: var(--ion-color-primary); }
+
+ion-menu ion-item ion-icon {
+  color: var(--ion-color-step-300);
+  font-size: 1.25rem;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 56px;
+  background: var(--ion-toolbar-background);
+  border-bottom: 1px solid var(--ion-border-color);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-brand {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--ion-color-primary);
+  text-transform: uppercase;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topbar-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ion-text-color);
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+
+.topbar-link:hover {
+  background: rgba(var(--ion-color-primary-rgb), 0.08);
+  color: var(--ion-color-primary);
+}
+
+.topbar-link.active {
+  background: rgba(var(--ion-color-primary-rgb), 0.12);
+  color: var(--ion-color-primary);
+}
+
+.topbar-link ion-icon { font-size: 1.1rem; }
+
+.theme-btn { margin-left: 8px; }
+
+.app-content {
+  padding-top: 56px;
+  height: 100%;
+}
+
+.app-content ion-router-outlet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu { display: flex; }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu { display: none !important; }
+}
